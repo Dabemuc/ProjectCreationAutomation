@@ -5,9 +5,6 @@ from github import Github
 foldername = str(sys.argv[1])
 path = "Directory where projects will be created and sorted by language"
 token = "GitHub Personal acces Token"
-_dirj = path + "/Java/"
-_dirjs = path + "/JavaScript/"
-_dirpy = path + "/Python/"
 
 g = Github(token)
 user = g.get_user()
@@ -23,8 +20,8 @@ commands = [f'echo "# {repo.name}" >> README.md',
 
 if len(sys.argv) == 3:
     if sys.argv[2] == "j":
-        os.mkdir(_dirj + foldername)
-        os.chdir(_dirj + foldername)
+        os.mkdir(path + "/Java/" + foldername)
+        os.chdir(path + "/Java/" + foldername)
 
         for c in commands:
             os.system(c)
@@ -34,8 +31,8 @@ if len(sys.argv) == 3:
         os.system('code .')
 
     elif sys.argv[2] == "js":
-        os.mkdir(_dirjs + foldername)
-        os.chdir(_dirjs + foldername)
+        os.mkdir(path + "/JavaScript/" + foldername)
+        os.chdir(path + "/JavaScript/" + foldername)
 
         for c in commands:
             os.system(c)
@@ -45,8 +42,8 @@ if len(sys.argv) == 3:
         os.system('code .')
 
     elif sys.argv[2] == "py":
-        os.mkdir(_dirpy + foldername)
-        os.chdir(_dirpy + foldername)
+        os.mkdir(path + "/Python/" + foldername)
+        os.chdir(path + "/Python/" + foldername)
 
         for c in commands:
             os.system(c)
