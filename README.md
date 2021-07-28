@@ -1,10 +1,12 @@
 ### About this project:
 ```
-This Project was heavily inspired by Kalle Hallden's project: https://github.com/KalleHallden/ProjectInitializationAutomation
+This Project was heavily inspired by Kalle Hallden's project: 
+https://github.com/KalleHallden/ProjectInitializationAutomation
 
 My attempt on automating the creation of a new coding project includes the following steps:
     - Creating a new project file at the desired location, while sorting the projects by used language
-      (Currently, the program is set up to sort the projects into three subfolders called Java, JavaScript and Python)
+      (Currently, the program is set up to sort the projects into three subfolders called Java, 
+      JavaScript and Python)
     - Creating git repository, pushing first commit and adding a readme.md file
     - launching VS Code
 
@@ -22,7 +24,9 @@ Step 2 - Adjust parameters
     Change the following variables inside create.py:
         path = "Directory where projects will be created and sorted by language"
         token = "GitHub Personal access Token"
-    You may have to manually type or copy in your GitHub Personal Access Token during the first creation of a project!
+        
+    You may have to manually type or copy in your GitHub Personal Access Token during the first 
+    creation of a project!
 
     If you want to add languages, you have to add another block like this one fitting your needs:
         if sys.argv[2] == "j":
