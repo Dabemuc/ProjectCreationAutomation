@@ -41,7 +41,7 @@ Step 3 - Add "projectCreationAutomation" - folder to PATH so the Program can be 
 ### How to use:
 ```bash
 To run the program, open cmd and type:
-    'create [project_name] [project_language (j, js, py)]'
+    'create [project_name] [project_language (j, js, py, fl, rn)]'
 
 Example:
     'create MyProject py'

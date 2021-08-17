@@ -40,7 +40,7 @@ if len(sys.argv) == 3:
         os.mkdir(path + "/Flutter/" + foldername)
         os.chdir(path + "/Flutter/" + foldername)
         pjname = re.sub("[^0-9a-zA-Z]+", "", foldername.lower())
-        os.system(f'flutter create --project-name {pjname} ./{foldername}')
+        os.system(f'flutter create --project-name {pjname} .')
 
     else:
         print(f'Please specify Project language! ("create <ProjectName> <ProjectLanguage (j, js, py, rn, fl)>")')
