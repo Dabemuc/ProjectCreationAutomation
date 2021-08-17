@@ -1,5 +1,6 @@
 import sys
 import os
+import re
 from github import Github
 
 foldername = str(sys.argv[1])
@@ -38,6 +39,8 @@ if len(sys.argv) == 3:
     elif sys.argv[2] == "fl":
         os.mkdir(path + "/Flutter/" + foldername)
         os.chdir(path + "/Flutter/" + foldername)
+        pjname = re.sub("[^0-9a-zA-Z]+", "", foldername.lower())
+        os.system(f'flutter create --project-name {pjname} ./{foldername}')
 
     else:
         print(f'Please specify Project language! ("create <ProjectName> <ProjectLanguage (j, js, py, rn, fl)>")')
