@@ -45,7 +45,7 @@ if len(sys.argv) == 3:
     for c in commands:
             os.system(c)
 
-    print(f'Java project {foldername} created locally')
+    print(f'Project {foldername} created locally')
     os.chdir(path)
     os.system('code .')
 
