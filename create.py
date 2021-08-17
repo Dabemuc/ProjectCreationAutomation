@@ -23,37 +23,31 @@ if len(sys.argv) == 3:
         os.mkdir(path + "/Java/" + foldername)
         os.chdir(path + "/Java/" + foldername)
 
-        for c in commands:
-            os.system(c)
-
-        print(f'Java project {foldername} created locally')
-        os.chdir(path)
-        os.system('code .')
-
     elif sys.argv[2] == "js":
         os.mkdir(path + "/JavaScript/" + foldername)
         os.chdir(path + "/JavaScript/" + foldername)
-
-        for c in commands:
-            os.system(c)
-
-        print(f'JavaScript project {foldername} created locally')
-        os.chdir(path)
-        os.system('code .')
 
     elif sys.argv[2] == "py":
         os.mkdir(path + "/Python/" + foldername)
         os.chdir(path + "/Python/" + foldername)
 
-        for c in commands:
-            os.system(c)
+    elif sys.argv[2] == "rn":
+        os.mkdir(path + "/ReactNative/" + foldername)
+        os.chdir(path + "/ReactNative/" + foldername)
 
-        print(f'Python project {foldername} created locally')
-        os.chdir(path)
-        os.system('code .')
+    elif sys.argv[2] == "fl":
+        os.mkdir(path + "/Flutter/" + foldername)
+        os.chdir(path + "/Flutter/" + foldername)
 
     else:
-        print(f'Please specify Project language! ("create <ProjectName> <ProjectLanguage (j, js, py)>")')
+        print(f'Please specify Project language! ("create <ProjectName> <ProjectLanguage (j, js, py, rn, fl)>")')
+
+    for c in commands:
+            os.system(c)
+
+    print(f'Java project {foldername} created locally')
+    os.chdir(path)
+    os.system('code .')
 
 else:
     print(f'Please specify Project language! ("create <ProjectName> <ProjectLanguage (j, js, py)>")')
