@@ -42,8 +42,12 @@ if len(sys.argv) == 3:
         pjname = re.sub("[^0-9a-zA-Z]+", "", foldername.lower())
         os.system(f'flutter create --project-name {pjname} .')
 
+    elif sys.argv[2] == "mc":
+        os.mkdir(path + "/Microcontroller/" + foldername)
+        os.chdir(path + "/Microcontroller/" + foldername)
+
     else:
-        print(f'Please specify Project language! ("create <ProjectName> <ProjectLanguage (j, js, py, rn, fl)>")')
+        print(f'Please specify Project language! ("create <ProjectName> <ProjectLanguage (j, js, py, rn, fl, mc)>")')
 
     for c in commands:
             os.system(c)
@@ -53,4 +57,4 @@ if len(sys.argv) == 3:
     os.system('code .')
 
 else:
-    print(f'Please specify Project language! ("create <ProjectName> <ProjectLanguage (j, js, py)>")')
+    print(f'Please specify Project language! ("create <ProjectName> <ProjectLanguage (j, js, py, rn, fl, mc)>")')

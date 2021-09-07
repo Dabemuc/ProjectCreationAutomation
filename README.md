@@ -6,7 +6,7 @@ https://github.com/KalleHallden/ProjectInitializationAutomation
 My attempt on automating the creation of a new coding project includes the following steps:
     - Creating a new project file at the desired location, while sorting the projects by used language
       (Currently, the program is set up to sort the projects into five subfolders called Java, 
-      JavaScript, Python, ReactNative and FLutter)
+      JavaScript, Python, ReactNative, FLutter, Microcontroller)
     - Creating git repository, pushing first commit and adding a readme.md file
     - launching VS Code
 
@@ -41,7 +41,7 @@ Step 3 - Add "projectCreationAutomation" - folder to PATH so the Program can be 
 ### How to use:
 ```bash
 To run the program, open cmd and type:
-    'create [project_name] [project_language (j, js, py, fl, rn)]'
+    'create [project_name] [project_language (j, js, py, fl, rn, mc)]'
 
 Example:
     'create MyProject py'
